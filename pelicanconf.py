@@ -33,6 +33,7 @@ SOCIAL = (('twitter', 'https://twitter.com/kaiblin'),
           ('github', 'https://github.com/kblin'),)
 
 TWITTER_USERNAME = u'kaiblin'
+DISQUS_SITENAME = u'phdops'
 
 DEFAULT_PAGINATION = 10
 
