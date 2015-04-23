@@ -21,6 +21,9 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 THEME = u'pelican-bootstrap3'
+BOOTSTRAP_THEME = u'simplex'
+
+CC_LICENSE = u'CC-BY'
 
 # Blogroll
 #LINKS = (('Pelican', 'http://getpelican.com/'),
@@ -34,8 +37,12 @@ SOCIAL = (('twitter', 'https://twitter.com/kaiblin'),
 
 TWITTER_USERNAME = u'kaiblin'
 DISQUS_SITENAME = u'phdops'
+USE_OPEN_GRAPH = True
+TWITTER_CARDS = True
+TWITTER_WIDGET_ID = u'591317301112270848'
 
 DEFAULT_PAGINATION = 10
+SHOW_DATE_MODIFIED = True
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
