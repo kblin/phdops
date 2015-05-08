@@ -63,12 +63,33 @@ Creating compiled packages from scratch
 ---------------------------------------
 **FIXME**: write more here.
 
-Creating python library packages from scratch
----------------------------------------------
+Creating python library packages from scratch, the easy way
+-----------------------------------------------------------
 
+The easy way to create deb from Python libraries is to simply use Jordan
+Sissel's brilliant [fpm tool](https://github.com/jordansissel/fpm). This isn't
+really cross-distribution-capable, but for pure python packages for python 2.7,
+this currently works fine for jessie and trusty. fpm makes creating a debian
+package as easy as
+```shell
+$ fpm -s python -t deb --iteration 1 straight.plugin==1.4.0-post-1
+```
+Note that I've picked a complicated example here, building `straight.plugin` in
+exactly version `1.4.0-post-1`, as all other versions currently are broken for
+me. In any case, this leaves you with a Debian package for your library in a few
+seconds. Can't really beat that. As a bonus, creating RPMs with fpm is just as
+easy, just replace the `-t deb` with `-t rpm`. You really can't go wrong with
+fpm for stuff that you can easily package. Just don't mention this to Debian
+packaging people, they get a bit agressive about people not doing things
+"properly".
+
+Creating "proper" python library packages from scratch
+--------------------------------------------------------
+
+Sometimes, unfortunately, you run into a more complicated library that fpm won't
+handle, and then you have to do this the proper way.
 I'm basing this section on the Debian [Python Library Style
 Guide](https://wiki.debian.org/Python/LibraryStyleGuide), with my notes added,
 as the library style guide is just some guide, not a step-by-step instruction
 thing.
-
 
