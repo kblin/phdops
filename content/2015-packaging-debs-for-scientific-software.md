@@ -57,6 +57,15 @@ Updating existing packages
 
 I'll pick `ncbi-blast+` for this example, because that was upgraded to 2.2.30 a
 while ago, but both Debian and Ubuntu currently ship older versions.
+As it turns out, there already is a version 2.2.30 package in Debian
+experimental, so let's go to the [debian package
+page](https://packages.debian.org/source/experimental/ncbi-blast+) and grab the
+[upstream
+tarball](http://http.debian.net/debian/pool/main/n/ncbi-blast+/ncbi-blast+_2.2.30.orig.tar.gz)
+and [Debian's
+changeset](http://http.debian.net/debian/pool/main/n/ncbi-blast+/ncbi-blast+_2.2.30-2.debian.tar.xz).
+
+
 **FIXME**: write more here.
 
 Creating compiled packages from scratch
