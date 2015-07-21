@@ -1,10 +1,13 @@
 Title: Running antiSMASH standalone from Docker
 Date: 2015-07-21 07:45
+Modified: 2015-07-21 10:28
 Category: Science
 Tags: python, antiSMASH, docker, packaging
 Slug: 2015-running-antismash-standalone-from-docker
 Author: Kai Blin
 Summary: A short guide for running antiSMASH from Docker
+
+**Update 2015-07-21 10:28 UTC**: It seems a bit less magic is needed in the wrapper script.
 
 Introduction
 ------------
@@ -91,7 +94,27 @@ All in all, I think this is a pretty nice way to get your feet wet with
 antiSMASH, but I have a couple of things that I find a bit annoying about this
 solution:
 
-- Some funky dance in the in-container wrapper script is required to make the
-  output be owned by the user calling the script.
+- <s>Some funky dance in the in-container wrapper script is required to make the
+  output be owned by the user calling the script.</s> **Update: see below**
 - At the moment, the wrapper script doesn't allow to pass multiple input files.
 - You always need to pass input and output directories to the wrapper script.
+
+Update 2015-07-21 10:28
+-----------------------
+
+As [Paolo Di Tommaso](https://twitter.com/PaoloDiTommaso/) points out, it is
+possible to specify the user the command _within_ the container runs at with
+`-u`.
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/kaiblin">@kaiblin</a> No, I think you should be able to specify any uid/gid</p>&mdash; Paolo Di Tommaso (@PaoloDiTommaso) <a href="https://twitter.com/PaoloDiTommaso/status/623435462154301440">July 21, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+The [Docker documentation on docker
+run](https://docs.docker.com/reference/run/#user) seems to imply otherwise:
+
+> The default user within a container is root (id = 0), but if the developer
+> created additional users, those are accessible too.
+
+But you can just use `-u $(id -u):$(id -g)` in the `docker run` command to
+specify the current user's UID and GID, That works, and makes the wrapper
+script less magic.
