@@ -1,8 +1,8 @@
 Title: Running antiSMASH standalone from Docker
-Date: 2015-07-20 14:25
+Date: 2015-07-21 07:45
 Category: Science
 Tags: python, antiSMASH, docker, packaging
-Slug: 2015-running-antismash-standalone-from-docker.md
+Slug: 2015-running-antismash-standalone-from-docker
 Author: Kai Blin
 Summary: A short guide for running antiSMASH from Docker
 
