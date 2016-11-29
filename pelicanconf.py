@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'Kai Blin'
 SITENAME = u'PhDOps'
 SITESUBTITLE = u'Tales from the underfunded cousin of DevOps, while trying to get research done.'
-SITEURL = u'http://phdops.kblin.org'
+SITEURL = u'//phdops.kblin.org'
 
 PATH = 'content'
 
