@@ -17,7 +17,7 @@ Today was the first time the system was put to use, and I'm pretty happy with
 how it all worked out. I can even reconstruct what probably happened. Looking at
 my graphite temperature graph for that freezer, the following story unfolds:
 
-[![Freezer temperature plot]({filename}/images/thumbs/freezer_fail.png)]({filename}/images/freezer_fail.png)
+[![Freezer temperature plot]({static}/images/thumbs/freezer_fail.png)]({static}/images/freezer_fail.png)
 
 A bit after 11:00, someone opened the freezer. They used the top drawer, which
 is pretty full with boxes holding Eppendorf cups. These boxes come in a low and

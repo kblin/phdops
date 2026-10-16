@@ -17,7 +17,7 @@ the temperature monitor.
 Mark I had a simple plastic back and a cardboard front, and was taped to the
 network/electricity rail in the room, like so:
 
-[![Mark I case]({filename}/images/thumbs/rpi_temp_monitor_mk1.jpg)](http://www.imagemagick.org/script/convert.php)
+[![Mark I case]({static}/images/thumbs/rpi_temp_monitor_mk1.jpg)](http://www.imagemagick.org/script/convert.php)
 
 While expedient to get set up and move the mess of cable out of the way, this
 setup has some problems. First, the Raspberry Pi tended to crash a lot. Not the
@@ -32,7 +32,7 @@ Fortunately, when you work in a lab, there are a lot of petri dishes around. We
 also have the large square ones. Two of those, a drill, a hand saw and half an
 hour later, the Mark II case was ready to go.
 
-[![Mark II case]({filename}/images/thumbs/rpi_temp_monitor_mk2.jpg)]({filename}/images/rpi_temp_monitor_mk2.jpg)
+[![Mark II case]({static}/images/thumbs/rpi_temp_monitor_mk2.jpg)]({static}/images/rpi_temp_monitor_mk2.jpg)
 
 It's attached to the rack door mesh with cable ties (yay, cable ties), and
 nicely out of the way of the 19" slots. Also visible is the custom board with
@@ -45,5 +45,5 @@ mounting the "in-rack" sensor on the door as well. It is now possible to track
 when I open and close the door, and of course the temperatures are off in that
 case.
 
-[![Temperature changes when door is open]({filename}/images/thumbs/sensor_in_door.png)]({filename}/images/sensor_in_door.png)
+[![Temperature changes when door is open]({static}/images/thumbs/sensor_in_door.png)]({static}/images/sensor_in_door.png)
 
